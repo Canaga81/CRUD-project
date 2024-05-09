@@ -1,0 +1,36 @@
+.chevron {
+    background-color: red;
+    animation: chevronLoading 1.5s linear infinite;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*^ Animation */
+@keyframes chevronLoading {
+
+    0% {
+        background-color: lightblue;
+        transform: scale(1);
+    }
+    25% {
+        background-color: yellow;
+        transform: scale(1.25);
+    }
+    50% {
+        background-color: lawngreen;
+        transform: scale(1.5);
+    }
+    75% {
+        background-color: aqua;
+        transform: scale(1.25);
+    }
+    100% {
+        background-color: red;
+        transform: scale(1);
+    }
+
+}
