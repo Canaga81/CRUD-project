@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
 
 const Home = () => {
+  
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -23,6 +24,7 @@ const Home = () => {
   }, []);
 
   const deleteHandler = async (id) => {
+
     try {
       await axios.delete(
         `https://6628a0ff54afcabd07365b50.mockapi.io/products/${id}`
@@ -32,9 +34,11 @@ const Home = () => {
     } catch (error) {
       alert("Mehsul Silinmedi !" + error);
     }
+
   };
 
   return (
+
     <div className="w-full h-full py-16">
       <div className="container mx-auto px-16">
         <Link to={"/create"}>
@@ -87,6 +91,7 @@ const Home = () => {
       </div>
     </div>
   );
+
 };
 
 export default Home;
